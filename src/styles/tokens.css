@@ -32,3 +32,37 @@
   --bg: #121212;
   --bg-raise: #1b1b1b;
   --bg-card: #232323;
+  --gold: #c59042;
+  --gold-light: #e0c387;
+  --gold-dark: #8a5f22;
+  --ivory: #fdfef9;
+  --muted: #b2aea5;
+  --hairline: rgba(224, 195, 135, 0.16);
+  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(197, 144, 66, 0.15);
+}
+
+[data-theme="light"] {
+  --bg: #faf9f6;
+  --bg-raise: #f5f4f0;
+  --bg-card: #ffffff;
+  --gold: #c59042;
+  --gold-light: #e0c387;
+  --gold-dark: #8a5f22;
+  --ivory: #1a1814;
+  --muted: #5c574f;
+  --hairline: rgba(138, 95, 34, 0.2);
+  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 40px rgba(197, 144, 66, 0.2);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ivory);
