@@ -77,3 +77,43 @@ export const Plan = z.object({
 });
 
 export const AddOn = z.object({
+  id: z.string(),
+  group: z.enum(["marketing", "website"]),
+  name: z.string(),
+  priceInr: z.number(),
+  note: z.string().optional(),
+});
+
+export const Hero = z.object({
+  greeting: z.string(),
+  title: z.string(),
+  statement: z.string(),
+  photo: z.string(),
+  photoAlt: z.string(),
+  primaryCta: z.string(),
+  secondaryCta: z.string(),
+});
+
+export const Faq = z.object({
+  q: z.string(),
+  a: z.string(),
+});
+
+export const EnquiryForm = z.object({
+  name: z.string().min(2, "Enter your name so Om knows who to reply to"),
+  business: z.string().optional(),
+  service: z.enum(["reels", "editing", "social", "ads", "website", "not-sure"]),
+  budget: z.enum(["<10k", "10-20k", "20-35k", "35k+", "not-sure"]).optional(),
+  message: z.string().max(500).optional(),
+});
+
+export type Contact = z.infer<typeof Contact>;
+export type Brand = z.infer<typeof Brand>;
+export type SiteSEO = z.infer<typeof SiteSEO>;
+export type WorkItem = z.infer<typeof WorkItem>;
+export type Service = z.infer<typeof Service>;
+export type Plan = z.infer<typeof Plan>;
+export type AddOn = z.infer<typeof AddOn>;
+export type Hero = z.infer<typeof Hero>;
+export type Faq = z.infer<typeof Faq>;
+export type EnquiryForm = z.infer<typeof EnquiryForm>;
