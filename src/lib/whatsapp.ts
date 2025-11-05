@@ -14,3 +14,20 @@ export const servicePrefill = (service: string) =>
 
 export const workPrefill = (category: string) =>
   `Hi Om, I saw your ${category} work and want something similar.`;
+
+export const formPrefill = (data: {
+  name: string;
+  business?: string;
+  service: string;
+  budget?: string;
+  message?: string;
+}) => {
+  const lines = [
+    `Hi Om, my name is ${data.name}.`,
+    data.business && `Business: ${data.business}`,
+    `Service: ${data.service}`,
+    data.budget && `Budget: ${data.budget}`,
+    data.message && `Message: ${data.message}`,
+  ].filter(Boolean);
+  return lines.join("\n");
+};
