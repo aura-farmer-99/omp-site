@@ -22,3 +22,28 @@ export function FilmCurve() {
         <motion.path
           d="M0,80 C240,20 480,100 720,60 C960,20 1200,100 1440,50"
           stroke="url(#goldGradient)"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+          initial={reduce ? false : { pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 1 }}
+          transition={{ duration: 2, ease: [0.23, 1, 0.32, 1], delay: 0.5 }}
+        />
+        {/* Sprocket holes */}
+        {Array.from({ length: 24 }).map((_, i) => (
+          <motion.circle
+            key={i}
+            cx={60 + i * 55}
+            cy={60 + Math.sin(i * 0.8) * 20}
+            r="3"
+            fill="url(#goldGradient)"
+            opacity={0.4}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 0.4 }}
+            transition={{ duration: 0.5, delay: 1 + i * 0.05 }}
+          />
+        ))}
+      </svg>
+    </div>
+  );
+}
