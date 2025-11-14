@@ -27,3 +27,32 @@ export function Accordion({ items }: AccordionProps) {
               </span>
               <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
+                className="shrink-0 text-gold"
+              >
+                <ChevronDown size={20} />
+              </motion.span>
+            </button>
+            <motion.div
+              id={`faq-panel-${i}`}
+              initial={false}
+              animate={{
+                height: isOpen ? "auto" : 0,
+                opacity: isOpen ? 1 : 0,
+              }}
+              transition={{
+                duration: 0.3,
+                ease: reduce ? "linear" : [0.23, 1, 0.32, 1],
+              }}
+              className="overflow-hidden"
+            >
+              <p className="pb-5 text-muted text-base leading-relaxed max-w-[65ch]">
+                {item.a}
+              </p>
+            </motion.div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
