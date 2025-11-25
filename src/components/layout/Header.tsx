@@ -97,3 +97,36 @@ export function Header() {
         </a>
 
         {/* Mobile menu button */}
+        <button
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          className="md:hidden ml-2 p-2 text-ivory hover:text-gold transition-colors cursor-pointer"
+          aria-label="Toggle menu"
+          aria-expanded={isMobileOpen}
+        >
+          {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </nav>
+
+      {/* Mobile menu sheet */}
+      {isMobileOpen && (
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          className="absolute top-full mt-2 left-0 right-0 bg-bg-raise/95 backdrop-blur-md border border-hairline rounded-[20px] p-4 md:hidden"
+        >
+          <div className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => handleNavClick(link.href)}
+                className="px-4 py-3 text-ivory hover:text-gold rounded-xl hover:bg-gold/5 transition-all"
+              >
+                {link.label}
+              </a>
+            ))}
+            <hr className="border-hairline my-2" />
+            <a
+              href={`tel:${contact.phoneDisplay.replace(/\s/g, "")}`}
+              className="px-4 py-3 text-muted hover:text-ivory rounded-xl hover:bg-gold/5 transition-all text-sm"
