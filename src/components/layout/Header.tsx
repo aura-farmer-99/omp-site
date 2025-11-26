@@ -130,3 +130,36 @@ export function Header() {
             <a
               href={`tel:${contact.phoneDisplay.replace(/\s/g, "")}`}
               className="px-4 py-3 text-muted hover:text-ivory rounded-xl hover:bg-gold/5 transition-all text-sm"
+            >
+              {contact.phoneDisplay}
+            </a>
+            <a
+              href={`mailto:${contact.email}`}
+              className="px-4 py-3 text-muted hover:text-ivory rounded-xl hover:bg-gold/5 transition-all text-sm"
+            >
+              {contact.email}
+            </a>
+            <a
+              href={contact.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 text-muted hover:text-ivory rounded-xl hover:bg-gold/5 transition-all text-sm"
+            >
+              Instagram
+            </a>
+            <a
+              href={buildWhatsAppUrl(defaultMessage)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_whatsapp", { location: "mobile_menu" })}
+              className="mt-2 flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium"
+            >
+              <MessageCircle size={18} />
+              Chat on WhatsApp
+            </a>
+          </div>
+        </motion.div>
+      )}
+    </motion.header>
+  );
+}
