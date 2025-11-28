@@ -58,3 +58,63 @@ export function Footer() {
                   Packages
                 </a>
               </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-muted hover:text-gold transition-colors text-sm"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-ivory font-medium mb-4">Get in touch</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href={buildWhatsAppUrl(defaultMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-gold transition-colors text-sm"
+                >
+                  {contact.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="text-muted hover:text-gold transition-colors text-sm"
+                >
+                  {contact.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contact.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted hover:text-gold transition-colors text-sm"
+                >
+                  @{contact.instagramHandle}
+                </a>
+              </li>
+              <li className="text-muted text-sm">{contact.location}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-hairline flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-muted text-xs">
+            &copy; {new Date().getFullYear()} {brand.name}. All rights reserved.
+          </p>
+          <p className="text-muted text-xs">
+            Based in {contact.location}
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
