@@ -62,3 +62,36 @@ export function Hero() {
               variants={itemVariants}
               className="text-muted text-lg md:text-xl leading-relaxed mb-8 max-w-[55ch]"
             >
+              {hero.statement}
+            </motion.p>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-wrap gap-4 mb-8"
+            >
+              <a
+                href={buildWhatsAppUrl(defaultMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("cta_whatsapp", { location: "hero" })}
+                className="inline-flex items-center justify-center h-12 px-7 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium text-base hover:shadow-[0_0_30px_rgba(197,144,66,0.25)] hover:brightness-110 transition-all duration-200 active:scale-[0.97]"
+              >
+                {hero.primaryCta}
+              </a>
+              <a
+                href="#work"
+                className="inline-flex items-center justify-center h-12 px-7 rounded-full border border-hairline text-ivory font-medium text-base hover:bg-gold/10 hover:border-gold/30 transition-all duration-200 active:scale-[0.97]"
+              >
+                {hero.secondaryCta}
+              </a>
+            </motion.div>
+
+            <motion.p
+              variants={itemVariants}
+              className="font-script text-2xl text-gold/80"
+            >
+              {brand.tagline}
+            </motion.p>
+          </motion.div>
+
+          {/* Photo */}
