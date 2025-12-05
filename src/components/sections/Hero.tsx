@@ -95,3 +95,35 @@ export function Hero() {
           </motion.div>
 
           {/* Photo */}
+          <motion.div
+            className="order-1 lg:order-2 flex justify-center lg:justify-end"
+            initial={reduce ? false : { opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          >
+            <div className="relative">
+              {/* Gold ring behind */}
+              <div className="absolute -inset-3 rounded-[32px] border border-gold/20" />
+              {/* Photo */}
+              <div className="relative w-[300px] h-[375px] md:w-[360px] md:h-[450px] lg:w-[400px] lg:h-[500px] rounded-[28px] overflow-hidden">
+                <img
+                  src={hero.photo}
+                  alt={hero.photoAlt}
+                  className="w-full h-full object-cover object-[50%_30%]"
+                  fetchPriority="high"
+                />
+                {/* Bottom fade into bg */}
+                <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-bg to-transparent" />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Film curve */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <FilmCurve />
+      </div>
+    </section>
+  );
+}
