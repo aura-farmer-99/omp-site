@@ -61,3 +61,35 @@ export function Services() {
                 </h3>
 
                 <p className="text-muted text-sm leading-relaxed mb-6">
+                  {service.summary}
+                </p>
+
+                <ul className="space-y-2.5 mb-8 flex-1">
+                  {service.includes.map((item, j) => (
+                    <li
+                      key={j}
+                      className="flex items-start gap-2.5 text-sm text-muted"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={link.href}
+                  onClick={() =>
+                    track("service_click", { service: service.id })
+                  }
+                  className="text-gold text-sm font-medium hover:text-gold-light transition-colors"
+                >
+                  {link.label}
+                </a>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
