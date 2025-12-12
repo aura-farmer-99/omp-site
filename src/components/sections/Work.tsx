@@ -50,3 +50,55 @@ export function Work() {
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ivory tracking-tight mb-4">
             Recent reels, films, campaigns and websites.
           </h2>
+        </motion.div>
+
+        {/* Reels rail */}
+        <div className="relative mb-16">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="font-display text-xl font-semibold text-ivory">
+              Reels
+            </h3>
+            <div className="flex items-center gap-3">
+              <a
+                href={instagramProfile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("instagram_click", { location: "reels" })}
+                className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-1.5"
+              >
+                <ExternalLink size={14} />
+                Instagram
+              </a>
+              <div className="hidden md:flex gap-2">
+                <button
+                  onClick={() => scrollRail("left")}
+                  className="w-10 h-10 rounded-full border border-hairline flex items-center justify-center text-muted hover:text-ivory hover:border-gold/30 transition-all cursor-pointer"
+                  aria-label="Scroll left"
+                >
+                  <ExternalLink size={16} className="rotate-180" />
+                </button>
+                <button
+                  onClick={() => scrollRail("right")}
+                  className="w-10 h-10 rounded-full border border-hairline flex items-center justify-center text-muted hover:text-ivory hover:border-gold/30 transition-all cursor-pointer"
+                  aria-label="Scroll right"
+                >
+                  <ExternalLink size={16} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            ref={railRef}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide -mx-6 px-6"
+          >
+            {reels.map((reel) => (
+              <div key={reel.id} className="snap-start">
+                <ReelCard
+                  item={reel}
+                  onPlay={(item) => {
+                    setActiveVideo(item);
+                    track("work_play", { id: item.id, group: "reel" });
+                  }}
+                />
+              </div>
