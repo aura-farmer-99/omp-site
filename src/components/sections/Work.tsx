@@ -102,3 +102,55 @@ export function Work() {
                   }}
                 />
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Films & campaigns with YouTube embeds */}
+        <div className="mb-16">
+          <div className="flex items-center justify-between mb-6">
+            <h3 className="font-display text-xl font-semibold text-ivory">
+              Films & campaigns
+            </h3>
+            <a
+              href={youtubeChannel.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("youtube_click", { location: "films" })}
+              className="text-muted hover:text-gold transition-colors text-sm flex items-center gap-1.5"
+            >
+              <YoutubeIcon size={14} />
+              YouTube
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {films.map((film, i) => (
+              <motion.div
+                key={film.id}
+                initial={reduce ? false : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.5,
+                  delay: reduce ? 0 : i * 0.1,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+              >
+                <button
+                  onClick={() => {
+                    setActiveVideo(film);
+                    track("work_play", { id: film.id, group: "film" });
+                  }}
+                  className="relative w-full aspect-video rounded-[20px] overflow-hidden group cursor-pointer border border-hairline"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-bg-card via-bg-raise to-bg-card" />
+                  {film.video?.poster && (
+                    <img
+                      src={film.video.poster}
+                      alt={film.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
