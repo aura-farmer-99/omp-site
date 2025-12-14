@@ -154,3 +154,56 @@ export function Work() {
                   )}
                   <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-14 h-14 rounded-full bg-gold/20 backdrop-blur-sm flex items-center justify-center border border-gold/30">
+                      <Play size={20} className="text-gold-light ml-0.5" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-ivory font-medium text-sm text-left">
+                      {film.title}
+                    </p>
+                  </div>
+                </button>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* YouTube embeds */}
+          <div className="mt-8">
+            <h4 className="text-muted text-sm font-medium mb-4">
+              Latest from YouTube
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {youtubeChannel.videoIds.map((videoId, i) => (
+                <div
+                  key={i}
+                  className="aspect-video rounded-[16px] overflow-hidden border border-hairline"
+                >
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={`YouTube video ${i + 1}`}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+            <p className="text-muted text-xs mt-3">
+              Update video IDs in{" "}
+              <code className="text-gold/70">src/content/work.ts</code> with
+              actual IDs from{" "}
+              <a
+                href={youtubeChannel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:underline"
+              >
+                @Ompolkat_patil
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Websites */}
