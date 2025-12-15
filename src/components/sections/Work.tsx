@@ -207,3 +207,55 @@ export function Work() {
         </div>
 
         {/* Websites */}
+        <div>
+          <h3 className="font-display text-xl font-semibold text-ivory mb-6">
+            Websites
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {websites.map((site, i) => (
+              <motion.div
+                key={site.id}
+                initial={reduce ? false : { opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.5,
+                  delay: reduce ? 0 : i * 0.1,
+                  ease: [0.23, 1, 0.32, 1],
+                }}
+              >
+                <BrowserFrame url="example.com">
+                  <div className="w-full h-full bg-gradient-to-br from-bg-card to-bg-raise flex items-center justify-center">
+                    <div className="text-center p-8">
+                      <div className="w-16 h-16 rounded-xl bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                        <ExternalLink size={24} className="text-gold" />
+                      </div>
+                      <p className="text-ivory font-medium mb-1">
+                        {site.title}
+                      </p>
+                      <p className="text-muted text-sm">Live preview</p>
+                    </div>
+                  </div>
+                </BrowserFrame>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Instagram link */}
+        <div className="mt-12 text-center">
+          <a
+            href={instagramProfile.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track("instagram_click", { location: "work" })}
+            className="inline-flex items-center gap-2 text-gold hover:text-gold-light transition-colors font-medium"
+          >
+            More on Instagram
+            <ExternalLink size={16} />
+          </a>
+        </div>
+      </div>
+
+      {/* Video modal */}
+      {activeVideo && (
