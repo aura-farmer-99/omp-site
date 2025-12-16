@@ -259,3 +259,55 @@ export function Work() {
 
       {/* Video modal */}
       {activeVideo && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setActiveVideo(null)}
+        >
+          <motion.div
+            initial={reduce ? false : { scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
+            className="relative max-w-lg w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute -top-12 right-0 text-ivory/60 hover:text-ivory transition-colors cursor-pointer"
+              aria-label="Close"
+            >
+              <ExternalLink size={24} />
+            </button>
+            <div className="aspect-[9/16] max-h-[70vh] mx-auto rounded-[20px] overflow-hidden bg-bg-card">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                    <Play size={32} className="text-gold ml-1" />
+                  </div>
+                  <p className="text-ivory font-medium text-lg mb-2">
+                    {activeVideo.title}
+                  </p>
+                  <p className="text-muted text-sm mb-6">
+                    Video preview — drop files in /public/work/
+                  </p>
+                  <a
+                    href={buildWhatsAppUrl(
+                      workPrefill(activeVideo.category)
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium text-sm hover:brightness-110 transition-all"
+                  >
+                    Want something like this?
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </section>
+  );
+}
