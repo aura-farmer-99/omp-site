@@ -236,3 +236,83 @@ export const marketingProjects: Plan[] = [
     whatsappPrefill:
       "Hi Om, I'd like video editing (₹799/reel). My business is ___.",
   },
+];
+
+export const marketingAddOns: AddOn[] = [
+  {
+    id: "extra-shoot",
+    group: "marketing",
+    name: "Extra shoot day",
+    priceInr: 4999,
+  },
+  {
+    id: "rush",
+    group: "marketing",
+    name: "Rush delivery (under 48h)",
+    priceInr: 0,
+    note: "+30%",
+  },
+];
+
+export const websiteAddOns: AddOn[] = [
+  {
+    id: "extra-page",
+    group: "website",
+    name: "Extra page",
+    priceInr: 2999,
+  },
+  {
+    id: "gbp",
+    group: "website",
+    name: "Google Business Profile setup",
+    priceInr: 1499,
+  },
+  {
+    id: "domain",
+    group: "website",
+    name: "Domain + hosting setup",
+    priceInr: 999,
+    note: "client pays registrar",
+  },
+  {
+    id: "copywriting",
+    group: "website",
+    name: "Copywriting",
+    priceInr: 1999,
+  },
+  {
+    id: "maintenance",
+    group: "website",
+    name: "Monthly maintenance",
+    priceInr: 999,
+    note: "per month",
+  },
+  {
+    id: "rush-web",
+    group: "website",
+    name: "Rush delivery",
+    priceInr: 0,
+    note: "+30%",
+  },
+];
+
+export const launchBundle: Plan = {
+  id: "launch-bundle",
+  group: "marketing",
+  kind: "bundle",
+  name: "Launch Bundle",
+  priceInr: 17999,
+  billing: "one-time",
+  startingFrom: true,
+  tagline: "Business website + 4 reels + Meta Ads setup",
+  bestFor: "Brands launching or relaunching",
+  features: [
+    "Business website (up to 8 sections)",
+    "4 reels for social and ads",
+    "Meta Ads setup and first campaign",
+    "Saves about ₹4,000",
+  ],
+  recommended: false,
+  whatsappPrefill:
+    "Hi Om, I'm interested in the Launch Bundle (₹17,999). My business is ___.",
+};
