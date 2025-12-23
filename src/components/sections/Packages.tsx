@@ -76,3 +76,43 @@ export function Packages() {
               <PackageCard plan={plan} />
             </motion.div>
           ))}
+        </div>
+
+        {/* Single projects (marketing only) */}
+        {projects.length > 0 && (
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: reduce ? 0 : 0.3 }}
+            className="mb-12"
+          >
+            <h3 className="font-display text-xl font-semibold text-ivory mb-6">
+              Single projects
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-bg-raise border border-hairline rounded-[20px] p-6 flex flex-col hover:border-gold/20 transition-all duration-300"
+                >
+                  <h4 className="text-ivory font-medium mb-1">
+                    {project.name}
+                  </h4>
+                  <p className="text-muted text-sm mb-4">{project.tagline}</p>
+                  <div className="mt-auto flex items-center justify-between">
+                    <span className="text-gold font-display text-lg font-semibold">
+                      {formatInr(project.priceInr)}
+                    </span>
+                    <a
+                      href={buildWhatsAppUrl(project.whatsappPrefill)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted hover:text-gold transition-colors"
+                    >
+                      Enquire
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
