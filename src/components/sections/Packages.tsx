@@ -116,3 +116,42 @@ export function Packages() {
               ))}
             </div>
           </motion.div>
+        )}
+
+        {/* Add-ons */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: reduce ? 0 : 0.4 }}
+          className="mb-12"
+        >
+          <h3 className="font-display text-xl font-semibold text-ivory mb-6">
+            Add-ons
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {addOns.map((addOn) => (
+              <div
+                key={addOn.id}
+                className="bg-bg-raise/50 border border-hairline rounded-[16px] p-5 flex items-center justify-between"
+              >
+                <div>
+                  <p className="text-ivory text-sm font-medium">
+                    {addOn.name}
+                  </p>
+                  {addOn.note && (
+                    <p className="text-muted text-xs mt-0.5">{addOn.note}</p>
+                  )}
+                </div>
+                <span className="text-gold font-medium text-sm">
+                  {addOn.priceInr > 0
+                    ? formatInr(addOn.priceInr)
+                    : addOn.note}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Launch Bundle banner */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, y: 20 }}
