@@ -155,3 +155,42 @@ export function Packages() {
         {/* Launch Bundle banner */}
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: reduce ? 0 : 0.5 }}
+          className="relative bg-gradient-to-br from-gold/10 via-bg-card to-gold/5 border border-gold/20 rounded-[28px] p-8 md:p-12 text-center mb-8"
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-bold text-ivory mb-3">
+            {launchBundle.name}
+          </h3>
+          <p className="text-muted text-lg mb-2">{launchBundle.tagline}</p>
+          <p className="text-gold font-display text-3xl font-bold mb-6">
+            {formatInr(launchBundle.priceInr)}
+          </p>
+          <p className="text-muted text-sm mb-6">
+            The reel gets attention, the website closes the enquiry.
+          </p>
+          <a
+            href={buildWhatsAppUrl(launchBundle.whatsappPrefill)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              track("package_select", {
+                plan: launchBundle.name,
+                group: "bundle",
+              })
+            }
+            className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium hover:shadow-[0_0_30px_rgba(197,144,66,0.25)] hover:brightness-110 transition-all duration-200 active:scale-[0.97]"
+          >
+            Choose this plan
+          </a>
+        </motion.div>
+
+        {/* Footnote */}
+        <p className="text-center text-muted text-sm">
+          Ad spend is paid by the client directly to Meta/Google. Prices start at
+          the amounts shown.
+        </p>
+      </div>
+    </section>
+  );
+}
