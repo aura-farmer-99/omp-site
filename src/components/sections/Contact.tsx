@@ -110,3 +110,59 @@ export function Contact() {
             <a
               href={buildWhatsAppUrl("Hi Om, I'd like to talk about a project.")}
               target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("cta_whatsapp", { location: "contact" })}
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium hover:shadow-[0_0_30px_rgba(197,144,66,0.25)] hover:brightness-110 transition-all duration-200 active:scale-[0.97]"
+            >
+              <MessageCircle size={18} />
+              Chat on WhatsApp
+            </a>
+            <a
+              href={`tel:${contact.phoneDisplay.replace(/\s/g, "")}`}
+              onClick={() => track("call_click", {})}
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-hairline text-ivory font-medium hover:bg-gold/10 hover:border-gold/30 transition-all duration-200"
+            >
+              <Phone size={18} />
+              {contact.phoneDisplay}
+            </a>
+            <a
+              href={`mailto:${contact.email}`}
+              onClick={() => track("email_click", {})}
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-hairline text-ivory font-medium hover:bg-gold/10 hover:border-gold/30 transition-all duration-200"
+            >
+              <Mail size={18} />
+              Email
+            </a>
+            <a
+              href={contact.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("instagram_click", {})}
+              className="inline-flex items-center gap-2 h-12 px-6 rounded-full border border-hairline text-ivory font-medium hover:bg-gold/10 hover:border-gold/30 transition-all duration-200"
+            >
+              <InstagramIcon size={18} />
+              Instagram
+            </a>
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Form */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+          >
+            {submitted ? (
+              <div className="bg-bg-card border border-hairline rounded-[24px] p-8 text-center">
+                <CheckCircle size={48} className="text-gold mx-auto mb-4" />
+                <h3 className="font-display text-xl font-semibold text-ivory mb-2">
+                  WhatsApp opened
+                </h3>
+                <p className="text-muted mb-4">
+                  If nothing happened, tap below to try again.
+                </p>
+                <a
+                  href={buildWhatsAppUrl(
+                    formPrefill({
