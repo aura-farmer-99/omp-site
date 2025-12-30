@@ -166,3 +166,58 @@ export function Contact() {
                 <a
                   href={buildWhatsAppUrl(
                     formPrefill({
+                      name: form.name,
+                      business: form.business,
+                      service: form.service,
+                      budget: form.budget,
+                      message: form.message,
+                    })
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center h-12 px-6 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium hover:brightness-110 transition-all"
+                >
+                  Open WhatsApp again
+                </a>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm text-muted mb-2"
+                  >
+                    Name <span className="text-gold">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    value={form.name}
+                    onChange={(e) =>
+                      setForm({ ...form, name: e.target.value })
+                    }
+                    className="w-full h-12 px-4 rounded-[16px] bg-bg-card border border-hairline text-ivory placeholder:text-muted/50 focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
+                    placeholder="Your name"
+                  />
+                  {errors.name && (
+                    <p className="text-red-400 text-xs mt-1.5">{errors.name}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="business"
+                    className="block text-sm text-muted mb-2"
+                  >
+                    Business name
+                  </label>
+                  <input
+                    id="business"
+                    type="text"
+                    value={form.business}
+                    onChange={(e) =>
+                      setForm({ ...form, business: e.target.value })
+                    }
+                    className="w-full h-12 px-4 rounded-[16px] bg-bg-card border border-hairline text-ivory placeholder:text-muted/50 focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
+                    placeholder="Your business or brand"
+                  />
