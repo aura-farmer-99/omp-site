@@ -221,3 +221,59 @@ export function Contact() {
                     className="w-full h-12 px-4 rounded-[16px] bg-bg-card border border-hairline text-ivory placeholder:text-muted/50 focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all"
                     placeholder="Your business or brand"
                   />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="service"
+                    className="block text-sm text-muted mb-2"
+                  >
+                    What do you need?
+                  </label>
+                  <select
+                    id="service"
+                    value={form.service}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        service: e.target.value as EnquiryForm["service"],
+                      })
+                    }
+                    className="w-full h-12 px-4 rounded-[16px] bg-bg-card border border-hairline text-ivory focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all appearance-none cursor-pointer"
+                  >
+                    {serviceOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="budget"
+                    className="block text-sm text-muted mb-2"
+                  >
+                    Budget range
+                  </label>
+                  <select
+                    id="budget"
+                    value={form.budget || ""}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        budget: (e.target.value || undefined) as EnquiryForm["budget"],
+                      })
+                    }
+                    className="w-full h-12 px-4 rounded-[16px] bg-bg-card border border-hairline text-ivory focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all appearance-none cursor-pointer"
+                  >
+                    <option value="">Select a range</option>
+                    {budgetOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
