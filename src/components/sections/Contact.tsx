@@ -277,3 +277,59 @@ export function Contact() {
                 </div>
 
                 <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm text-muted mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    value={form.message}
+                    onChange={(e) =>
+                      setForm({ ...form, message: e.target.value })
+                    }
+                    rows={4}
+                    maxLength={500}
+                    className="w-full px-4 py-3 rounded-[16px] bg-bg-card border border-hairline text-ivory placeholder:text-muted/50 focus:border-gold/50 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all resize-none"
+                    placeholder="Tell us about your project..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full h-12 rounded-full bg-gradient-to-br from-gold-light via-gold to-gold-dark text-bg font-medium text-base hover:shadow-[0_0_30px_rgba(197,144,66,0.25)] hover:brightness-110 transition-all duration-200 active:scale-[0.97] cursor-pointer flex items-center justify-center gap-2"
+                >
+                  <Send size={18} />
+                  Send on WhatsApp
+                </button>
+
+                <p className="text-center text-muted text-xs">
+                  This opens WhatsApp with your message pre-filled. No data is
+                  stored.
+                </p>
+              </form>
+            )}
+          </motion.div>
+
+          {/* FAQ */}
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{
+              duration: 0.6,
+              delay: reduce ? 0 : 0.1,
+              ease: [0.23, 1, 0.32, 1],
+            }}
+          >
+            <h3 className="font-display text-xl font-semibold text-ivory mb-6">
+              Common questions
+            </h3>
+            <Accordion items={faqs} />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
