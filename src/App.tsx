@@ -12,3 +12,17 @@ export default function App() {
   return (
     <ThemeProvider>
       <div className="grain-overlay">
+        <Header />
+        <main>
+          <Hero />
+          <Services />
+          <Work />
+          <Packages />
+          <Contact />
+        </main>
+        <Footer />
+        <FloatingWhatsApp />
+      </div>
+    </ThemeProvider>
+  );
+}
