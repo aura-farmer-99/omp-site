@@ -26,3 +26,4 @@ export default function App() {
     </ThemeProvider>
   );
 }
+// POLKAT-101: follow up on hero spacing on mobile
