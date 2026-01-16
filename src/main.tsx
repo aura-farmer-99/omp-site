@@ -8,4 +8,4 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </StrictMode>
 );
-// POLKAT-102: refine gold accent contrast
+// POLKAT-102: finalise gold accent contrast
