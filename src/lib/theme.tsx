@@ -39,4 +39,4 @@ export function useTheme() {
   }
   return context;
 }
-// POLKAT-105: follow up on contact form validation copy
+// POLKAT-105: refine contact form validation copy
