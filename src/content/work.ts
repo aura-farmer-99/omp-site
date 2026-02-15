@@ -155,4 +155,3 @@ export const instagramProfile = {
   handle: "om.polkat.patil",
   url: "https://www.instagram.com/om.polkat.patil/",
 };
-// POLKAT-110: refine theme toggle icon
