@@ -316,4 +316,4 @@ export const launchBundle: Plan = {
   whatsappPrefill:
     "Hi Om, I'm interested in the Launch Bundle (₹17,999). My business is ___.",
 };
-// POLKAT-111: follow up on services grid balance
+// POLKAT-111: refine services grid balance
