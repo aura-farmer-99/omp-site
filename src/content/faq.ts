@@ -18,4 +18,4 @@ export const faqs: Faq[] = [
     a: "For reels: your footage or a shoot day. For marketing: access to your social pages and ad accounts. For websites: your logo, brand colours and content (or we can help write it).",
   },
 ];
-// POLKAT-112: follow up on work modal backdrop
+// POLKAT-112: refine work modal backdrop
