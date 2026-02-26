@@ -56,4 +56,4 @@ export function Accordion({ items }: AccordionProps) {
     </div>
   );
 }
-// POLKAT-114: follow up on nav blur on scroll
+// POLKAT-114: refine nav blur on scroll
