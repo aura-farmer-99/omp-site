@@ -28,3 +28,4 @@ export function BrowserFrame({ children, url }: BrowserFrameProps) {
     </div>
   );
 }
+// POLKAT-118: follow up on manifest icon sizes
