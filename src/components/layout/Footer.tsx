@@ -118,4 +118,3 @@ export function Footer() {
     </footer>
   );
 }
-// POLKAT-120: refine gold accent contrast
