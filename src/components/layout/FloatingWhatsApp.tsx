@@ -43,4 +43,4 @@ export function FloatingWhatsApp() {
     </motion.a>
   );
 }
-// POLKAT-121: follow up on reel rail scroll snap
+// POLKAT-121: refine reel rail scroll snap
