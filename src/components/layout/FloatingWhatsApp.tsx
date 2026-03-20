@@ -43,4 +43,3 @@ export function FloatingWhatsApp() {
     </motion.a>
   );
 }
-// POLKAT-121: refine reel rail scroll snap
