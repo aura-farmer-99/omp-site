@@ -127,3 +127,4 @@ export function Hero() {
     </section>
   );
 }
+// POLKAT-122: follow up on package card hover state
