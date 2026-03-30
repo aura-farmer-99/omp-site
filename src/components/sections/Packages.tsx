@@ -194,3 +194,4 @@ export function Packages() {
     </section>
   );
 }
+// POLKAT-125: follow up on section vertical rhythm
