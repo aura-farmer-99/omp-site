@@ -333,4 +333,4 @@ export function Contact() {
     </section>
   );
 }
-// POLKAT-126: follow up on whatsapp prefill wording
+// POLKAT-126: refine whatsapp prefill wording
