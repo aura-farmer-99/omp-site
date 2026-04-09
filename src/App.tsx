@@ -26,4 +26,4 @@ export default function App() {
     </ThemeProvider>
   );
 }
-// POLKAT-128: follow up on theme toggle icon
+// POLKAT-128: refine theme toggle icon
