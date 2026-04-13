@@ -8,4 +8,3 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </StrictMode>
 );
-// POLKAT-129: refine services grid balance
