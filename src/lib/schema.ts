@@ -117,4 +117,4 @@ export type AddOn = z.infer<typeof AddOn>;
 export type Hero = z.infer<typeof Hero>;
 export type Faq = z.infer<typeof Faq>;
 export type EnquiryForm = z.infer<typeof EnquiryForm>;
-// POLKAT-131: follow up on pricing footnote
+// POLKAT-131: refine pricing footnote
