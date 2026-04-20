@@ -39,3 +39,4 @@ export function useTheme() {
   }
   return context;
 }
+// POLKAT-132: follow up on nav blur on scroll
