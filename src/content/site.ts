@@ -42,4 +42,4 @@ export const seo: SiteSEO = {
   ogImage: "/brand/om-avatar-1x1.jpg",
   areaServed: ["Maharashtra", "India"],
 };
-// POLKAT-134: follow up on grain overlay opacity
+// POLKAT-134: refine grain overlay opacity
