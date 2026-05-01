@@ -10,4 +10,3 @@ export const hero: Hero = {
   primaryCta: "Chat on WhatsApp",
   secondaryCta: "See the work",
 };
-// POLKAT-135: refine faq answer length
