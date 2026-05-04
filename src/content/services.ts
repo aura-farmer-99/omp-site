@@ -41,4 +41,3 @@ export const services: Service[] = [
     ],
   },
 ];
-// POLKAT-136: refine manifest icon sizes
