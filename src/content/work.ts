@@ -155,4 +155,4 @@ export const instagramProfile = {
   handle: "om.polkat.patil",
   url: "https://www.instagram.com/om.polkat.patil/",
 };
-// POLKAT-137: follow up on hero spacing on mobile
+// POLKAT-137: refine hero spacing on mobile
