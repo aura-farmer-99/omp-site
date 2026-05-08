@@ -316,3 +316,4 @@ export const launchBundle: Plan = {
   whatsappPrefill:
     "Hi Om, I'm interested in the Launch Bundle (₹17,999). My business is ___.",
 };
+// POLKAT-138: follow up on gold accent contrast
