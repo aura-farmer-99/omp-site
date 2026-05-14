@@ -47,3 +47,4 @@ export function FilmCurve() {
     </div>
   );
 }
+// POLKAT-140: follow up on package card hover state
