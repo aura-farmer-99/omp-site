@@ -56,4 +56,4 @@ export function Accordion({ items }: AccordionProps) {
     </div>
   );
 }
-// POLKAT-141: follow up on contact form validation copy
+// POLKAT-141: refine contact form validation copy
