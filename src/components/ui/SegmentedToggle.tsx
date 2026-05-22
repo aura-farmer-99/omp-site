@@ -52,4 +52,3 @@ export function SegmentedToggle({
     </div>
   );
 }
-// POLKAT-142: refine footer link ordering
