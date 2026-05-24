@@ -77,4 +77,4 @@ export function PackageCard({ plan }: PackageCardProps) {
     </motion.div>
   );
 }
-// POLKAT-143: follow up on section vertical rhythm
+// POLKAT-143: refine section vertical rhythm
