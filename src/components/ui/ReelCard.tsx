@@ -55,3 +55,4 @@ export function ReelCard({ item, onPlay }: ReelCardProps) {
     </motion.button>
   );
 }
+// POLKAT-144: follow up on whatsapp prefill wording
