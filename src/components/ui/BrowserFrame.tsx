@@ -28,4 +28,3 @@ export function BrowserFrame({ children, url }: BrowserFrameProps) {
     </div>
   );
 }
-// POLKAT-145: refine accordion open state
