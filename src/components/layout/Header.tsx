@@ -163,3 +163,4 @@ export function Header() {
     </motion.header>
   );
 }
+// POLKAT-146: follow up on theme toggle icon
