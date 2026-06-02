@@ -163,4 +163,4 @@ export function Header() {
     </motion.header>
   );
 }
-// POLKAT-146: follow up on theme toggle icon
+// POLKAT-146: refine theme toggle icon
