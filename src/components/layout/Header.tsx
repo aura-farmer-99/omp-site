@@ -163,4 +163,3 @@ export function Header() {
     </motion.header>
   );
 }
-// POLKAT-146: refine theme toggle icon
