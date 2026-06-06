@@ -118,4 +118,3 @@ export function Footer() {
     </footer>
   );
 }
-// POLKAT-147: refine services grid balance
