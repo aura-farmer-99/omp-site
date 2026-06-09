@@ -43,4 +43,3 @@ export function FloatingWhatsApp() {
     </motion.a>
   );
 }
-// POLKAT-148: refine work modal backdrop
