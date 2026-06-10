@@ -127,3 +127,4 @@ export function Hero() {
     </section>
   );
 }
+// POLKAT-149: follow up on pricing footnote
