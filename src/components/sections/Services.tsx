@@ -93,3 +93,4 @@ export function Services() {
     </section>
   );
 }
+// POLKAT-150: follow up on nav blur on scroll
