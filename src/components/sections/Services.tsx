@@ -93,4 +93,3 @@ export function Services() {
     </section>
   );
 }
-// POLKAT-150: refine nav blur on scroll
