@@ -311,4 +311,4 @@ export function Work() {
     </section>
   );
 }
-// POLKAT-151: follow up on button active scale
+// POLKAT-151: refine button active scale
