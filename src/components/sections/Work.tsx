@@ -311,4 +311,3 @@ export function Work() {
     </section>
   );
 }
-// POLKAT-151: refine button active scale
