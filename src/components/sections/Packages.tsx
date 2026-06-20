@@ -194,4 +194,4 @@ export function Packages() {
     </section>
   );
 }
-// POLKAT-152: follow up on grain overlay opacity
+// POLKAT-152: refine grain overlay opacity
