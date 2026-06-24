@@ -333,4 +333,3 @@ export function Contact() {
     </section>
   );
 }
-// POLKAT-153: refine faq answer length
