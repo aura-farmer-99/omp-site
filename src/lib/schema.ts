@@ -117,4 +117,4 @@ export type AddOn = z.infer<typeof AddOn>;
 export type Hero = z.infer<typeof Hero>;
 export type Faq = z.infer<typeof Faq>;
 export type EnquiryForm = z.infer<typeof EnquiryForm>;
-// POLKAT-158: follow up on package card hover state
+// POLKAT-158: refine package card hover state
