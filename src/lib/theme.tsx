@@ -39,4 +39,3 @@ export function useTheme() {
   }
   return context;
 }
-// POLKAT-159: refine contact form validation copy
