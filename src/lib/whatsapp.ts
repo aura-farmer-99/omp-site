@@ -31,4 +31,4 @@ export const formPrefill = (data: {
   ].filter(Boolean);
   return lines.join("\n");
 };
-// POLKAT-160: follow up on footer link ordering
+// POLKAT-160: refine footer link ordering
