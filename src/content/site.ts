@@ -42,4 +42,3 @@ export const seo: SiteSEO = {
   ogImage: "/brand/om-avatar-1x1.jpg",
   areaServed: ["Maharashtra", "India"],
 };
-// POLKAT-161: refine section vertical rhythm
