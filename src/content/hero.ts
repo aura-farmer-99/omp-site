@@ -10,4 +10,4 @@ export const hero: Hero = {
   primaryCta: "Chat on WhatsApp",
   secondaryCta: "See the work",
 };
-// POLKAT-162: follow up on whatsapp prefill wording
+// POLKAT-162: refine whatsapp prefill wording
