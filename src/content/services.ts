@@ -41,4 +41,3 @@ export const services: Service[] = [
     ],
   },
 ];
-// POLKAT-163: refine accordion open state
