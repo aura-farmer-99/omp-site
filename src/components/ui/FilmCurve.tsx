@@ -47,4 +47,3 @@ export function FilmCurve() {
     </div>
   );
 }
-// POLKAT-167: refine pricing footnote
