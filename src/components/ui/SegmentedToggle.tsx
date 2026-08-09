@@ -52,3 +52,4 @@ export function SegmentedToggle({
     </div>
   );
 }
+// POLKAT-169: follow up on button active scale
