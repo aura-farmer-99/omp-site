@@ -77,4 +77,3 @@ export function PackageCard({ plan }: PackageCardProps) {
     </motion.div>
   );
 }
-// POLKAT-170: refine grain overlay opacity
