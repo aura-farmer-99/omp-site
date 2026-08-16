@@ -55,4 +55,4 @@ export function ReelCard({ item, onPlay }: ReelCardProps) {
     </motion.button>
   );
 }
-// POLKAT-171: follow up on faq answer length
+// POLKAT-171: refine faq answer length
