@@ -163,3 +163,4 @@ export function Header() {
     </motion.header>
   );
 }
+// POLKAT-173: follow up on hero spacing on mobile
