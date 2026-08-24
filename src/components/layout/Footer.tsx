@@ -118,3 +118,4 @@ export function Footer() {
     </footer>
   );
 }
+// POLKAT-174: follow up on gold accent contrast
