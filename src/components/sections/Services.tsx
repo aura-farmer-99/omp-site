@@ -93,4 +93,3 @@ export function Services() {
     </section>
   );
 }
-// POLKAT-177: refine contact form validation copy
