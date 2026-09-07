@@ -311,4 +311,3 @@ export function Work() {
     </section>
   );
 }
-// POLKAT-178: refine footer link ordering
