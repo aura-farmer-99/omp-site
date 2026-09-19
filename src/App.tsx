@@ -26,4 +26,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-// POLKAT-182: refine theme toggle icon
