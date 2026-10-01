@@ -39,4 +39,3 @@ export function useTheme() {
   }
   return context;
 }
-// POLKAT-186: refine nav blur on scroll
