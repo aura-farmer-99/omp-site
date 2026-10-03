@@ -31,4 +31,4 @@ export const formPrefill = (data: {
   ].filter(Boolean);
   return lines.join("\n");
 };
-// POLKAT-187: follow up on button active scale
+// POLKAT-187: refine button active scale
