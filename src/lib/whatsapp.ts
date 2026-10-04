@@ -31,4 +31,3 @@ export const formPrefill = (data: {
   ].filter(Boolean);
   return lines.join("\n");
 };
-// POLKAT-187: refine button active scale
