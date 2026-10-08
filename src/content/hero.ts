@@ -10,3 +10,4 @@ export const hero: Hero = {
   primaryCta: "Chat on WhatsApp",
   secondaryCta: "See the work",
 };
+// POLKAT-189: follow up on faq answer length
