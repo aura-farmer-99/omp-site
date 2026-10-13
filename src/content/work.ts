@@ -1,4 +1,5 @@
 import type { WorkItem } from "../lib/schema";
+import { asset } from "../lib/asset";
 
 export const reels: WorkItem[] = [
   {
@@ -7,8 +8,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-01.mp4",
-      poster: "/work/reel-01.jpg",
+      mp4: asset("/work/reel-01.mp4"),
+      poster: asset("/work/reel-01.jpg"),
     },
     durationSec: 12,
     featured: true,
@@ -20,8 +21,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-02.mp4",
-      poster: "/work/reel-02.jpg",
+      mp4: asset("/work/reel-02.mp4"),
+      poster: asset("/work/reel-02.jpg"),
     },
     durationSec: 15,
     featured: false,
@@ -33,8 +34,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-03.mp4",
-      poster: "/work/reel-03.jpg",
+      mp4: asset("/work/reel-03.mp4"),
+      poster: asset("/work/reel-03.jpg"),
     },
     durationSec: 10,
     featured: false,
@@ -46,8 +47,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-04.mp4",
-      poster: "/work/reel-04.jpg",
+      mp4: asset("/work/reel-04.mp4"),
+      poster: asset("/work/reel-04.jpg"),
     },
     durationSec: 8,
     featured: false,
@@ -59,8 +60,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-05.mp4",
-      poster: "/work/reel-05.jpg",
+      mp4: asset("/work/reel-05.mp4"),
+      poster: asset("/work/reel-05.jpg"),
     },
     durationSec: 14,
     featured: false,
@@ -72,8 +73,8 @@ export const reels: WorkItem[] = [
     category: "reel",
     format: "video-9x16",
     video: {
-      mp4: "/work/reel-06.mp4",
-      poster: "/work/reel-06.jpg",
+      mp4: asset("/work/reel-06.mp4"),
+      poster: asset("/work/reel-06.jpg"),
     },
     durationSec: 20,
     featured: false,
@@ -88,8 +89,8 @@ export const films: WorkItem[] = [
   //   category: "film",
   //   format: "video-16x9",
   //   video: {
-  //     mp4: "/work/film-01.mp4",
-  //     poster: "/work/film-01.jpg",
+  //     mp4: asset("/work/film-01.mp4"),
+  //     poster: asset("/work/film-01.jpg"),
   //   },
   //   durationSec: 90,
   //   featured: true,
@@ -101,8 +102,8 @@ export const films: WorkItem[] = [
   //   category: "event",
   //   format: "video-16x9",
   //   video: {
-  //     mp4: "/work/film-02.mp4",
-  //     poster: "/work/film-02.jpg",
+  //     mp4: asset("/work/film-02.mp4"),
+  //     poster: asset("/work/film-02.jpg"),
   //   },
   //   durationSec: 60,
   //   featured: false,
@@ -114,8 +115,8 @@ export const films: WorkItem[] = [
   //   category: "ads",
   //   format: "video-16x9",
   //   video: {
-  //     mp4: "/work/film-03.mp4",
-  //     poster: "/work/film-03.jpg",
+  //     mp4: asset("/work/film-03.mp4"),
+  //     poster: asset("/work/film-03.jpg"),
   //   },
   //   durationSec: 30,
   //   featured: false,
@@ -129,7 +130,7 @@ export const websites: WorkItem[] = [
     title: "Restaurant landing page",
     category: "website",
     format: "site",
-    image: "/work/site-01.jpg",
+    image: asset("/work/site-01.jpg"),
     featured: true,
   },
   {
@@ -137,7 +138,7 @@ export const websites: WorkItem[] = [
     title: "Fitness coach website",
     category: "website",
     format: "site",
-    image: "/work/site-02.jpg",
+    image: asset("/work/site-02.jpg"),
     featured: false,
   },
 ];

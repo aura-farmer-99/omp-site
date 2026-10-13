@@ -1,4 +1,5 @@
 import type { Brand, Contact, SiteSEO } from "../lib/schema";
+import { asset } from "../lib/asset";
 
 export const brand: Brand = {
   name: "Polkat Productions & Marketing",
@@ -6,10 +7,10 @@ export const brand: Brand = {
   tagline: "Frames That Speak",
   descriptor: "Event Reels | Cinematic Videos | Highlights",
   logo: {
-    circle: "/brand/om-avatar-1x1.jpg",
-    mark: "/brand/om-avatar-1x1.jpg",
-    wordmark: "/brand/om-avatar-1x1.jpg",
-    og: "/brand/om-avatar-1x1.jpg",
+    circle: asset("/brand/om-avatar-1x1.jpg"),
+    mark: asset("/brand/om-avatar-1x1.jpg"),
+    wordmark: asset("/brand/om-avatar-1x1.jpg"),
+    og: asset("/brand/om-avatar-1x1.jpg"),
   },
   colors: {
     bg: "#121212",
@@ -38,7 +39,9 @@ export const seo: SiteSEO = {
   title: "Polkat Productions & Marketing | Video Production, Social Media, Ads & Web",
   description:
     "Polkat Productions & Marketing helps brands get noticed with video, social media, ads and websites. Based in Maharashtra, India.",
-  url: import.meta.env.VITE_SITE_URL || "https://polkat.in",
-  ogImage: "/brand/om-avatar-1x1.jpg",
+  url:
+    import.meta.env.VITE_SITE_URL ||
+    "https://aura-farmer-99.github.io/omp-site/",
+  ogImage: asset("/brand/om-avatar-1x1.jpg"),
   areaServed: ["Maharashtra", "India"],
 };
